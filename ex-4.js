@@ -82,3 +82,17 @@ let orders = [
 ];
 
 // Start coding here
+//ให้ใช้ For Loop หาชื่อของสินค้าที่มีราคาต่อชิ้นสูงที่สุดใน orders และนำชื่อสินค้านั้นมาแสดงผลบนหน้าจอ Console
+//ผลลัพธ์ที่แสดงออกทางหน้าจอจะเป็นแบบนี้
+//The most expensive product in orders: Wine - Red, Harrow Estates, Cab
+let theTopPrice = 0;
+let theTopPriceProductName = "";
+for(let i = 0; i < orders.length; i++){
+  for (let key in orders[i]){
+    if((orders[i].productPrice / orders[i].productQuantity) > theTopPrice){
+      theTopPrice = (orders[i].productPrice / orders[i].productQuantity);
+      theTopPriceProductName = orders[i].productName;
+    }
+  }
+}
+console.log(`The most expensive product in orders: ${theTopPriceProductName}`);

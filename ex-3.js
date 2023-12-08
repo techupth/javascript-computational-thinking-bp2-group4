@@ -82,3 +82,13 @@ let orders = [
 ];
 
 // Start coding here
+//ให้ใช้ For Loop ในการหาผลรวมของมูลค่าคำสั่งซื้อทั้งหมดของ "Birdie Shepland"
+//ผลลัพธ์ที่แสดงออกทางหน้าจอจะเป็นแบบนี้
+//Total paid amount of Birdie Shepland: 379,925 Baht
+let totalAmountBirdie = 0;
+for (let i = 0; i < orders.length;i++){
+  if(orders[i].customerName === "Birdie Shepland"){
+    totalAmountBirdie += orders[i].productPrice * orders[i].productQuantity;
+  }
+}
+console.log(`Total paid amount of Birdie Shepland: ${totalAmountBirdie} Baht`);
